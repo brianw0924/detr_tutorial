@@ -307,7 +307,9 @@ def build(args):
     #     num_classes = 250
     if args.dataset_file == "face":
         num_classes = 1
-        
+    if args.dataset_file == "skull":
+        num_classes = 1
+                
     device = torch.device(args.device)
 
     backbone = build_backbone(args)
